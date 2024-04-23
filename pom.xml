@@ -29,6 +29,26 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration> 
+				<cloudHubDeployment>
+      <muleVersion>4.6.2</muleVersion>
+      <username>${username}</username>
+      <password>${password}</password>
+      <applicationName>test-application</applicationName>
+      <environment>Dev</environment>
+      <region>us-east-2</region>
+      <workers>1</workers>
+      <workerType>MICRO</workerType>
+      <objectStoreV2>true</objectStoreV2>objectStoreV2>
+      <properties>
+        <key>value</key>
+      </properties>
+    </cloudHubDeployment>
+				 </configuration>
+				
+				
+				
+				
 			</plugin>
 		</plugins>
 	</build>
